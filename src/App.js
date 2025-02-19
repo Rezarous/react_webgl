@@ -6,7 +6,7 @@ function App() {
   useEffect(() => {
     // Load Unity WebGL only once when component mounts
     const loadUnity = async () => {
-      const buildUrl = '/WebGLBuild/Build'
+      const buildUrl = process.env.PUBLIC_URL + '/WebGLBuild/Build'
       const loaderUrl = buildUrl + '/WebGLBuild.loader.js'
 
       const config = {
